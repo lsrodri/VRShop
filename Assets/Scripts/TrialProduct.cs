@@ -4,19 +4,27 @@ public class TrialProduct : MonoBehaviour
 {
     [ReadOnly] public int productID;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
     }
+
     void OnEnable()
     {
-        //transform.hideFlags = HideFlags.NotEditable;
+        // Lock the transform to prevent accidental edits
+        transform.hideFlags = HideFlags.NotEditable;
     }
+
+#if UNITY_EDITOR
+    // Lock transform in the editor
+    void OnValidate()
+    {
+        transform.hideFlags = HideFlags.NotEditable;
+    }
+#endif
 }
