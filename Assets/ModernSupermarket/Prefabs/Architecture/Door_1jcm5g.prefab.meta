@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 08ed1f2ddc650bd4093dc318f6c06b02
+labels:
+- Architecture
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Architecture/Door_1jcm5g.prefab
+  uploadId: 419452

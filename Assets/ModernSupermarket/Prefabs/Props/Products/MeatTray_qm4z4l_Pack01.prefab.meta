@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 481601076a9c7514d9f06a81157642ab
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/MeatTray_qm4z4l_Pack01.prefab
+  uploadId: 419452

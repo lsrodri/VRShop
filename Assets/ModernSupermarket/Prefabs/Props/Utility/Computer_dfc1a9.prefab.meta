@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 426d15d03e2abe74c94795931a49e950
+labels:
+- Utility
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Utility/Computer_dfc1a9.prefab
+  uploadId: 419452

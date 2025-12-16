@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c62bb78c9d149ba4a856e63c18895f81
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/SweetJar_alnwix_Pack01.prefab
+  uploadId: 419452

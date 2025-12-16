@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 12cc23afa9bcf6440aca0631fd106c89
+labels:
+- Edible
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Produce/Garlic_tkqeno.prefab
+  uploadId: 419452

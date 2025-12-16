@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d5aeb169a768aeb4b9bf948f51c0b957
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Shampoo_u15m67_Var01.prefab
+  uploadId: 419452

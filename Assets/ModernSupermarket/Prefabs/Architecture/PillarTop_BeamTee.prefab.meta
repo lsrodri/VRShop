@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 5ed29bab0b3484547831f49e356b9d8d
+labels:
+- Architecture
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Architecture/PillarTop_BeamTee.prefab
+  uploadId: 419452

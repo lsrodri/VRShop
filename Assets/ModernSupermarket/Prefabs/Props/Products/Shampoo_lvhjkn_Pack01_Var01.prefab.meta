@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 3d347801d6b57b742a1c7e3b1bb9e877
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Shampoo_lvhjkn_Pack01_Var01.prefab
+  uploadId: 419452

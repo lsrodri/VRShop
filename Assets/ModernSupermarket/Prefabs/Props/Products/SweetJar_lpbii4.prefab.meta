@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c1673e0caf48ec748b0c20908f444c12
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/SweetJar_lpbii4.prefab
+  uploadId: 419452

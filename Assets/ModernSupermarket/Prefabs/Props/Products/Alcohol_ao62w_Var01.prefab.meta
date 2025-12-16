@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 64f35e946f50e324aa777eb219cfa2c3
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Alcohol_ao62w_Var01.prefab
+  uploadId: 419452

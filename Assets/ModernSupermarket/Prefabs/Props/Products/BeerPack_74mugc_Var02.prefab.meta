@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 0d8f2e1a69d7875479ce04ba176567bb
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/BeerPack_74mugc_Var02.prefab
+  uploadId: 419452

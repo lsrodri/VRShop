@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d0b72d8e138411342939f9de971f7127
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Alcohol_qi7uqv.prefab
+  uploadId: 419452

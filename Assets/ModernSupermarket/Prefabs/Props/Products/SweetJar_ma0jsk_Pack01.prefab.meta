@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 3d4b2863086fe9c48a2a841e37e9b873
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/SweetJar_ma0jsk_Pack01.prefab
+  uploadId: 419452

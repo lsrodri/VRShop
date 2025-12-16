@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 9aac5da4c249fb943b2f58502039d284
+labels:
+- Architecture
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Architecture/Wall.prefab
+  uploadId: 419452

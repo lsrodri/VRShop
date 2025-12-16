@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 86bebc59bbf697443b2d2fe62f85fd9a
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Ham_wplnxm_Var01.prefab
+  uploadId: 419452

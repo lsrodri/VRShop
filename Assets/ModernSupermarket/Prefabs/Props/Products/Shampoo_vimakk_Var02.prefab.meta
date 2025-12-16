@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 865c18a4b018f7e4ebe13f9b5177ef08
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Shampoo_vimakk_Var02.prefab
+  uploadId: 419452

@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: d354f60515d290f4e9dc76ba0fef2774
+labels:
+- Edible
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Produce/Pineapple_c1vx80.prefab
+  uploadId: 419452

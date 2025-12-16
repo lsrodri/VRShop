@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c73376a1998bd1c49896a76fbe19296f
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Salt_9we170_Pack01.prefab
+  uploadId: 419452

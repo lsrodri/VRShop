@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c939da716dff90848a1e126425cddbc9
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Pepper_ybmiq9_Pack01.prefab
+  uploadId: 419452

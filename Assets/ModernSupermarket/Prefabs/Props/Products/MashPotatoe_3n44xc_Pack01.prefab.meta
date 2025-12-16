@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 632862b46c7ba544f80e54da2351d9f2
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/MashPotatoe_3n44xc_Pack01.prefab
+  uploadId: 419452

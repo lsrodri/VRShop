@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 030c7a3ef8bdc9741b1b95ce21a3a528
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Sushis_jtvduo.prefab
+  uploadId: 419452

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 0a73becfe6be99e4e93315be92226d42
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Cake_a3h87k_Var01.prefab
+  uploadId: 419452

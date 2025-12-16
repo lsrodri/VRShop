@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 2f8e32a9dee717043bf91ed6172f7ddd
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Bleach_c6nm2t_Pack01.prefab
+  uploadId: 419452

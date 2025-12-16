@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8cebf82815fd35d4aabcf69f9681605f
+labels:
+- Furniture
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Furniture/Shelf_6h7vop.prefab
+  uploadId: 419452

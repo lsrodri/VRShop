@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 916e5d11fdc41234bbc9c83d8f27780a
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Bag_s45li3_Var02.prefab
+  uploadId: 419452

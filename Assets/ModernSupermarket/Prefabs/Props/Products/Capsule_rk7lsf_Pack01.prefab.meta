@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c3d4dc580429df048853e6130cd432ba
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Capsule_rk7lsf_Pack01.prefab
+  uploadId: 419452

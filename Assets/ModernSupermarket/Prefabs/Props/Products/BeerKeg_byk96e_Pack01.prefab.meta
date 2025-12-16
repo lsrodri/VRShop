@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 40ba5c103f61d824a92ff684fa256a77
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/BeerKeg_byk96e_Pack01.prefab
+  uploadId: 419452

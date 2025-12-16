@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1e8423ddadac4e046940412bf9ece277
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/ChocolatePowder_yqiogt.prefab
+  uploadId: 419452

@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: c846c643e91ceb745a05176026a67fa1
+labels:
+- Decoration
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Vase_enq19o_03.prefab
+  uploadId: 419452

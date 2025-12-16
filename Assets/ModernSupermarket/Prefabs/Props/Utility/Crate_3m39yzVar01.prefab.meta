@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: b2425087ff39d214d9933764da1b05ee
+labels:
+- Storage
+- Utility
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Utility/Crate_3m39yzVar01.prefab
+  uploadId: 419452

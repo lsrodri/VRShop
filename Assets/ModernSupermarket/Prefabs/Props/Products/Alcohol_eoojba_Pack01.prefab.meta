@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1fa542a672dcea44a93124631297a047
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Alcohol_eoojba_Pack01.prefab
+  uploadId: 419452

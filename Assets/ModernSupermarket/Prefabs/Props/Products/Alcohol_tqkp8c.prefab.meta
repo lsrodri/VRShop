@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 72a5ecf378139ae4e866d4419f33f3ab
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Alcohol_tqkp8c.prefab
+  uploadId: 419452

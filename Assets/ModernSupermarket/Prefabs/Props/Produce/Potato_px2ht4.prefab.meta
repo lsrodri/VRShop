@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: dc36be957822fdb48b2ec2fdbace5c9a
+labels:
+- Edible
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Produce/Potato_px2ht4.prefab
+  uploadId: 419452

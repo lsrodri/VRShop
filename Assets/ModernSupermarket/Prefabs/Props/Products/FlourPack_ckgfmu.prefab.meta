@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f431c6be8e42c764abc05c7495b25e23
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/FlourPack_ckgfmu.prefab
+  uploadId: 419452

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: cfeafa383293e234d928ae08c2ebfb25
+labels:
+- Furniture
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Furniture/Table_8sjjys.prefab
+  uploadId: 419452

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b1507a0d72e9b5646b9cf2d5975e3a26
+labels:
+- Furniture
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Furniture/Shelf_hler4q.prefab
+  uploadId: 419452

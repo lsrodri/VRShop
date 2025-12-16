@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 073dfce97529269418b94d6d278de14b
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Soda_f6b9gw.prefab
+  uploadId: 419452

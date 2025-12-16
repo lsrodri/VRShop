@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 034980f0bab40a54fb7f4b8942ffb90b
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Cleanser_o964qg.prefab
+  uploadId: 419452

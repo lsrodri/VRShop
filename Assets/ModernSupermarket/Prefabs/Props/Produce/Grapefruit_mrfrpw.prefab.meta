@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: c91c58ca9f7e30242969f6f813e748cf
+labels:
+- Edible
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Produce/Grapefruit_mrfrpw.prefab
+  uploadId: 419452

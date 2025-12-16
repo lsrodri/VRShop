@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 467386ef186ad174980100b233812dd6
+labels:
+- Furniture
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Furniture/Stall_94wthk.prefab
+  uploadId: 419452

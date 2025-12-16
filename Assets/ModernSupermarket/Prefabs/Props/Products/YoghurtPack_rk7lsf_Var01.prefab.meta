@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c18e82116ecca5f4985b232f75c7666f
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/YoghurtPack_rk7lsf_Var01.prefab
+  uploadId: 419452

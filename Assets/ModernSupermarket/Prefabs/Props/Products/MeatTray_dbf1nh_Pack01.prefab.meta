@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 5eeadbff47195114ca10c97066cc4691
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/MeatTray_dbf1nh_Pack01.prefab
+  uploadId: 419452

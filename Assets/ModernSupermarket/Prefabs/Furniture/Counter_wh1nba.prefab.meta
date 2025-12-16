@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e1ba54eeae249de4dafc7d3a4dfae543
+labels:
+- Furniture
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Furniture/Counter_wh1nba.prefab
+  uploadId: 419452

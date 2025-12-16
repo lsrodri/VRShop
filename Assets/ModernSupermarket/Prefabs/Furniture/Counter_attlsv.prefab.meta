@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a259acacddc0d754c9883eaf0f64e1ee
+labels:
+- Furniture
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Furniture/Counter_attlsv.prefab
+  uploadId: 419452

@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: b2ae0947009279d4196262682e7a6b89
+labels:
+- Edible
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Produce/Banana_zjs4oz.prefab
+  uploadId: 419452

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 88c4e3a2157af504ba53474c0c432e1d
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/EggBox4x_nbzek2.prefab
+  uploadId: 419452

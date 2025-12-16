@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a7e5c1d56ee25a741a6ff47291beba63
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Pizza_ehb1pe_Var02.prefab
+  uploadId: 419452

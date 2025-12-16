@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8e356eef40e7f8140a0fc6883563a2db
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Sugar_o0f6pn.prefab
+  uploadId: 419452

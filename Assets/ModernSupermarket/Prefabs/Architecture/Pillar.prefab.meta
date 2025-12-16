@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 732f750f21db00543ad2b0cdbf2c236f
+labels:
+- Architecture
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Architecture/Pillar.prefab
+  uploadId: 419452

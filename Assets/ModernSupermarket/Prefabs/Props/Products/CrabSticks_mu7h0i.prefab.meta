@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c6011a36d7dc94c48ba9af7d7b4fa5c4
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/CrabSticks_mu7h0i.prefab
+  uploadId: 419452

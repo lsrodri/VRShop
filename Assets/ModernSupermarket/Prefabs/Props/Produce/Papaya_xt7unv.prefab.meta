@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 82c2daf369f250e43824f5906c9b79c0
+labels:
+- Edible
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Produce/Papaya_xt7unv.prefab
+  uploadId: 419452

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: af3fddf35f711cd4d829d9bf46663596
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/PaperTowel_b8o0yi.prefab
+  uploadId: 419452

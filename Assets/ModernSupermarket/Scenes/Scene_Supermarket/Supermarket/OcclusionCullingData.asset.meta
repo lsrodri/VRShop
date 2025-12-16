@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0ce31c552e856454cae043b22981dc85
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Scenes/Scene_Supermarket/Supermarket/OcclusionCullingData.asset
+  uploadId: 419452

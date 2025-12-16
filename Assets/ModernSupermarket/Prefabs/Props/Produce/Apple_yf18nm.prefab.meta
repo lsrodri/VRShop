@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: cf73a1e54a1bd8c4689ad45d61cc0f84
+labels:
+- Edible
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Produce/Apple_yf18nm.prefab
+  uploadId: 419452

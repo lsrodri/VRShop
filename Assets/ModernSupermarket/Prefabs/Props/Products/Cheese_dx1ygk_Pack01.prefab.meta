@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 6fa52bc1896c23642b184204de813339
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Cheese_dx1ygk_Pack01.prefab
+  uploadId: 419452

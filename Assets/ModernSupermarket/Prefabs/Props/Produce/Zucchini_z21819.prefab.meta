@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 1c484a383d5c64340b0289fc6cc08dec
+labels:
+- Edible
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Produce/Zucchini_z21819.prefab
+  uploadId: 419452

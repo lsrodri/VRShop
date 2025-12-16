@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a106300d002197d42ac0626dae3abe84
+labels:
+- Furniture
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Furniture/HeritageStall_0hvi4wVar01.prefab
+  uploadId: 419452

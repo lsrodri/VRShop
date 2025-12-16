@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 2ffb446c5e43dd447af0a240ccb79385
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Pasta_9duit2.prefab
+  uploadId: 419452

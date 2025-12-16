@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 25e035f1747cebe47a24a855a3f80093
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Shaders/MaskedColor.shader
+  uploadId: 419452

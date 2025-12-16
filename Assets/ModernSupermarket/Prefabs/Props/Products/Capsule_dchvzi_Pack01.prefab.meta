@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 2ee2b387e432c8040bf1f0b888688398
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Capsule_dchvzi_Pack01.prefab
+  uploadId: 419452

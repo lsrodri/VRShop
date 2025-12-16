@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c2e37f4974c5cd24ba7134eb98a09d98
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Cleanser_7dsib5_Pack01.prefab
+  uploadId: 419452

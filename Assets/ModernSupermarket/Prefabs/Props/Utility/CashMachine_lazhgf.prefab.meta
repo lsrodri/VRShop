@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 82af2b73bcb53e341aec2538113c742c
+labels:
+- Utility
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Utility/CashMachine_lazhgf.prefab
+  uploadId: 419452

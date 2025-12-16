@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 480ac4db1301e3046b3fcd90828a33a9
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/TinCan_60afsy_02_Var01.prefab
+  uploadId: 419452

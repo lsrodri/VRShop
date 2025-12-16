@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 2ab1c9d9ccabbf345bee8f7a13b4faf1
+labels:
+- Furniture
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Furniture/HeritageBuffet_wkjvvgVar01.prefab
+  uploadId: 419452

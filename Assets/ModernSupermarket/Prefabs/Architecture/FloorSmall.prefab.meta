@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 0d5df746bb0749449966315e41224d6c
+labels:
+- Architecture
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Architecture/FloorSmall.prefab
+  uploadId: 419452

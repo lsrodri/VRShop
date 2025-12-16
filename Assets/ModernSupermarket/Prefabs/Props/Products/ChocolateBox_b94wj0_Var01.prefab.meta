@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 17c73ddd0fbcac243a467132ee0a8891
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/ChocolateBox_b94wj0_Var01.prefab
+  uploadId: 419452

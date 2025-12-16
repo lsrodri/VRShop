@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: da57a3187f4a27b478d4064531c775a2
+labels:
+- Decoration
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Paintings_wmgwnw_02.prefab
+  uploadId: 419452

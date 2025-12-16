@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: a529d4036b71eb445bcbfce9c0f9d050
+labels:
+- Edible
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Produce/ChilliPeppers_w388hm.prefab
+  uploadId: 419452

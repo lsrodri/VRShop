@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 7ae853c018dd63540b50f870e2f72f63
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Bleach_irrpnt_Pack01.prefab
+  uploadId: 419452

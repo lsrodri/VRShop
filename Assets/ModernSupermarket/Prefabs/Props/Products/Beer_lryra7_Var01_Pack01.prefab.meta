@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 5da0c9ac1c7932f4ab9f1c6356a241c2
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Beer_lryra7_Var01_Pack01.prefab
+  uploadId: 419452

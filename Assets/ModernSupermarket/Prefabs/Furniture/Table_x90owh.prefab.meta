@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 7142b2fd07f504443a5f02cea2b528a7
+labels:
+- Furniture
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Furniture/Table_x90owh.prefab
+  uploadId: 419452

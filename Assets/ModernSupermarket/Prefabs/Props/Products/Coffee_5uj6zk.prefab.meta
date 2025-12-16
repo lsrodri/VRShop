@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 4a7f1e6533fc5ef43b347ee123c94086
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Coffee_5uj6zk.prefab
+  uploadId: 419452

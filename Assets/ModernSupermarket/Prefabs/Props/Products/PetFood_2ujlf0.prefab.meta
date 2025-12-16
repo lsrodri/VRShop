@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d8b9b35161e358346b84ce1925ef4240
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/PetFood_2ujlf0.prefab
+  uploadId: 419452

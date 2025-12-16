@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 5b3b28e3d93c8be4ebecf15024bf4b49
+labels:
+- Decoration
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Vase_0p0iky_03_Var02.prefab
+  uploadId: 419452

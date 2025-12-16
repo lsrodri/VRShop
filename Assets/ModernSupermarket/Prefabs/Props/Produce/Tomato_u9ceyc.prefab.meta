@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 77214190a46c588448b89ae4f74f9e64
+labels:
+- Edible
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Produce/Tomato_u9ceyc.prefab
+  uploadId: 419452

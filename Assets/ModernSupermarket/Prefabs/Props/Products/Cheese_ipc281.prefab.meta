@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 34e33a767ff4c3e41aad6a700b3aba11
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Cheese_ipc281.prefab
+  uploadId: 419452

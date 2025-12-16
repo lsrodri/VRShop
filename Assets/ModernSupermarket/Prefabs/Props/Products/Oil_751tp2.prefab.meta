@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a52fcbc7343948e4e8d553d1897db902
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Oil_751tp2.prefab
+  uploadId: 419452

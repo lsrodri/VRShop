@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 599778eafcaff394bacdc37cff12adea
+labels:
+- Decoration
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Decoration_3k4dyn_05.prefab
+  uploadId: 419452

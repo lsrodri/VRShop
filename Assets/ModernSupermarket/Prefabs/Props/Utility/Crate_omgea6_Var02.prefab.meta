@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 3b9a9ff64dbebc9449515f08eb16ed82
+labels:
+- Storage
+- Utility
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Utility/Crate_omgea6_Var02.prefab
+  uploadId: 419452

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: bd0eef10dd0e7fd438a4e56045b9d461
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/PotatoeBag_gcx3y2.prefab
+  uploadId: 419452

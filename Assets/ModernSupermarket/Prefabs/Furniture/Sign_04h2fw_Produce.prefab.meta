@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 4034456ace60ee24cae64378dfa7d9f9
+labels:
+- Furniture
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Furniture/Sign_04h2fw_Produce.prefab
+  uploadId: 419452

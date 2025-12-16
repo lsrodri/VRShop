@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 07c6629e0ed69b944819f9cd9a427d78
+labels:
+- Edible
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Produce/Squash_0r6m5l.prefab
+  uploadId: 419452

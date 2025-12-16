@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 97927c4e9c7bca44486b7e4ea6a8f639
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Shaders/Tesselation.shader
+  uploadId: 419452

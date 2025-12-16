@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 6bbc7d782f3b681438c645efab1e311b
+labels:
+- Furniture
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Furniture/Grid_dyxmv5.prefab
+  uploadId: 419452

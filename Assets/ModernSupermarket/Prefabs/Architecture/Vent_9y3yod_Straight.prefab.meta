@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f195c1a4dfe26ac48870be379b5890f2
+labels:
+- Architecture
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Architecture/Vent_9y3yod_Straight.prefab
+  uploadId: 419452

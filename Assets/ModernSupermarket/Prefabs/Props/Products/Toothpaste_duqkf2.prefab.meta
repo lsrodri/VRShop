@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 04711a67d674b624fb80daac94d6d4be
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Toothpaste_duqkf2.prefab
+  uploadId: 419452

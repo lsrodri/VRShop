@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 3fffb567d7ab59149b900c6324c1c5a4
+labels:
+- Architecture
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Architecture/PillarTop_BeamLeft.prefab
+  uploadId: 419452

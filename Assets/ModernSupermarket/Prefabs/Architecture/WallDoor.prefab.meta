@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a9890977fa8c9ae4d9a57a4af815622a
+labels:
+- Architecture
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Architecture/WallDoor.prefab
+  uploadId: 419452

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 5f7efea257e22ae41a365428c68d5a95
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/CansPack_f98qxo.prefab
+  uploadId: 419452

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e75f6260963da8840b8d67ae1a78250e
+labels:
+- Utility
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Utility/Scale_av1k2p.prefab
+  uploadId: 419452

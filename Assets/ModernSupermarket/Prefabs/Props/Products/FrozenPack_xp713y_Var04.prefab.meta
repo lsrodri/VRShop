@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a8441b5b7b9f4ed488cfbda89bc9cf33
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/FrozenPack_xp713y_Var04.prefab
+  uploadId: 419452

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 54deff073cbd82042af0edb1fe5e7c57
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Teabox_fhe54d.prefab
+  uploadId: 419452

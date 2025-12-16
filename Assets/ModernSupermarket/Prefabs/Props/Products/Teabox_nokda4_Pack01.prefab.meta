@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 33b0453471bea5f4984ea68fcb173d66
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Teabox_nokda4_Pack01.prefab
+  uploadId: 419452

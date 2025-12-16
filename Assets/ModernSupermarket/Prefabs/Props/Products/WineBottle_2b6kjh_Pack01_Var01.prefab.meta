@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 148f1e1dc80bf6347a0f65403bedaa44
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/WineBottle_2b6kjh_Pack01_Var01.prefab
+  uploadId: 419452

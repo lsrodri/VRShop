@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: d97217d4b06887941b6b0f4083dac63a
+labels:
+- Edible
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Produce/Carrot_i2roww.prefab
+  uploadId: 419452

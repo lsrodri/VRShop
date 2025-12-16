@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 37a3542982f6cfa4fa116a6e8e1a6a3d
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/FrozenPack_t7wenh.prefab
+  uploadId: 419452

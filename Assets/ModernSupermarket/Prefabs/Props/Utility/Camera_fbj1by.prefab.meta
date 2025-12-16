@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1755c736e7f0c2c46aee0d2f6631f364
+labels:
+- Utility
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Utility/Camera_fbj1by.prefab
+  uploadId: 419452

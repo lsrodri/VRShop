@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b30f3eb612c28b84aafe176c38502680
+labels:
+- Furniture
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Furniture/Checkout_4295b5.prefab
+  uploadId: 419452

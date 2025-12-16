@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1b48a5c5990f06343bb73f06606a34c0
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/ChocolateSpread_xhkyij_Pack01_Var01.prefab
+  uploadId: 419452

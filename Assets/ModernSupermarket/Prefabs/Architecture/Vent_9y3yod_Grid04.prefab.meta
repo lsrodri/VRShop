@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a3bd7168031eab14c80b43f7f11cc0de
+labels:
+- Architecture
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Architecture/Vent_9y3yod_Grid04.prefab
+  uploadId: 419452

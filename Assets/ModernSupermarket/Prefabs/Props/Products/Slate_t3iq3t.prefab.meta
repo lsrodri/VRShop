@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 5bad6b3c2fbb8aa4fbc51e2fa77d0dca
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Slate_t3iq3t.prefab
+  uploadId: 419452

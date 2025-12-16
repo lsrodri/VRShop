@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 5ff42aecd33fbac44877fb756869b6ac
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Soap_eegrv7_Var01.prefab
+  uploadId: 419452

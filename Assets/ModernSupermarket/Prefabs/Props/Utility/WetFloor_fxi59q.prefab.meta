@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 38f66f4ee22bedd4a856a09b6292b9ba
+labels:
+- Utility
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Utility/WetFloor_fxi59q.prefab
+  uploadId: 419452

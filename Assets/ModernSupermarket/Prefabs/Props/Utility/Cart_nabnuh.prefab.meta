@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d8ea10e099920e944a0be1325030ca41
+labels:
+- Utility
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Utility/Cart_nabnuh.prefab
+  uploadId: 419452

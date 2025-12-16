@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a7f09ccc2d3a442489dcb7abaa467ffd
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/YoghurtPack_kjd150.prefab
+  uploadId: 419452

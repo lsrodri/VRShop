@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 8f5c9f829e6987b408c4320785b0ca31
+labels:
+- Edible
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Produce/Watermelon_z0o9y3.prefab
+  uploadId: 419452

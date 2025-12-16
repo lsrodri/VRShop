@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1adcdff5512bb3640ae65758b5a6a916
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/OldMetalBox_edzkm9.prefab
+  uploadId: 419452

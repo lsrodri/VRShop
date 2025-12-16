@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 0241520004fc10d49869f6131cfff326
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/CandyPack_qkmq5d.prefab
+  uploadId: 419452

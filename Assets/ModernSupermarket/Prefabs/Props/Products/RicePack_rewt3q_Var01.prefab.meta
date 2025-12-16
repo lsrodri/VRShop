@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 30428d206ac30d7439f48b1b69b46585
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/RicePack_rewt3q_Var01.prefab
+  uploadId: 419452

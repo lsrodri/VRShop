@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 94ca1181a50fde2409ab31df2bf22b36
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Sugar_ffc568_Var01.prefab
+  uploadId: 419452

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 30f466339b33f9947a329dadf92fcfdc
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/SlicedBread_tp7aom_Pack01.prefab
+  uploadId: 419452

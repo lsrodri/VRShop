@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 67f6b708f4253704ab6e2149f61cb150
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Laundry_mm7gx5_Var02.prefab
+  uploadId: 419452

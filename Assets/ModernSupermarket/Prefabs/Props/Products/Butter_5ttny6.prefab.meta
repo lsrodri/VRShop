@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8c7773a9c7d6b6c4c9b33e87af8f2741
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Butter_5ttny6.prefab
+  uploadId: 419452

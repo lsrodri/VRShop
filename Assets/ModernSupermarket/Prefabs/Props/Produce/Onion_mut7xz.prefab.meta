@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 77913529fbb423b4ea211445e79fd6cf
+labels:
+- Edible
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Produce/Onion_mut7xz.prefab
+  uploadId: 419452

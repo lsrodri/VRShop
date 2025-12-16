@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 135a7cab58438ff41ad8e1675bcceeb7
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/FrozenBox_vhvpd4_Pack04.prefab
+  uploadId: 419452

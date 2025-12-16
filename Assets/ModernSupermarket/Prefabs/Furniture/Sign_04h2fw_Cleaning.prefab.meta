@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 5216e785d6e568d4db22a355d3c81a15
+labels:
+- Furniture
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Furniture/Sign_04h2fw_Cleaning.prefab
+  uploadId: 419452

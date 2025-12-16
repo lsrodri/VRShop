@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 493951e7f8b8ac643aed1f48f0f4804a
+labels:
+- Architecture
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Architecture/Vent_9y3yod_Curve.prefab
+  uploadId: 419452

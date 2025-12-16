@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 461831bbb42b7df49a5a80aaa1d3681e
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/SliceBread_6zus31.prefab
+  uploadId: 419452

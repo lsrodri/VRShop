@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 03120fe0067e41646aeef3bb7a078e97
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Sushis_r6r1w6_Pack01.prefab
+  uploadId: 419452

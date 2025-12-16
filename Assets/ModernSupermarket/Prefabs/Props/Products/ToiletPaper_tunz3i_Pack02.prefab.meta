@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1a2ba8f338e28994fb26b447e4a5568b
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/ToiletPaper_tunz3i_Pack02.prefab
+  uploadId: 419452

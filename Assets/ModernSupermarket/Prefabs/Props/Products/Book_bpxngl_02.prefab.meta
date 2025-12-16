@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 74a4db84668b8a24aac82e56631f48cd
+labels:
+- Decoration
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Book_bpxngl_02.prefab
+  uploadId: 419452

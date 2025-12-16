@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 25d66a07faa479a4981ff21f38aad23e
+labels:
+- Furniture
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Furniture/Door_o8w2gy.prefab
+  uploadId: 419452

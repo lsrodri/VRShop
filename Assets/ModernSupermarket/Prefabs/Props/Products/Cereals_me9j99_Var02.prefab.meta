@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e000e9fd918b8894483ee077c8b4c760
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Cereals_me9j99_Var02.prefab
+  uploadId: 419452

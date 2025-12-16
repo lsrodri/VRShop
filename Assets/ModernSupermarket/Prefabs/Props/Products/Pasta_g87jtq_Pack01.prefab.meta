@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 96f1062f02875c843b3100cb31acc392
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Pasta_g87jtq_Pack01.prefab
+  uploadId: 419452

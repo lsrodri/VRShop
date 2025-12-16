@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 57984c482ade36749be036a2e470fa60
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Teabox_5oq0ki.prefab
+  uploadId: 419452

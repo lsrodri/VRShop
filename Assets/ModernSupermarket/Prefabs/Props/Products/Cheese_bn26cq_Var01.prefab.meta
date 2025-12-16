@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d95be38afc74ad341961c8b9c718df38
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Cheese_bn26cq_Var01.prefab
+  uploadId: 419452

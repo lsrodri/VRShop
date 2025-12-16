@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 43e187253bac0784996ec1132de9ecf9
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/EggBox12x_7zw3j2.prefab
+  uploadId: 419452

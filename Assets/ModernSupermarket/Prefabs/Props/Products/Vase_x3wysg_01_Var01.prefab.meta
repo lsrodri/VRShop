@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 20ab71cb9f696e347ab14b64fee1a403
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Vase_x3wysg_01_Var01.prefab
+  uploadId: 419452

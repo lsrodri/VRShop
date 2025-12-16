@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 7658121868a96654eaaf8d5dadf2fc5a
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Soda_7gwg2t.prefab
+  uploadId: 419452

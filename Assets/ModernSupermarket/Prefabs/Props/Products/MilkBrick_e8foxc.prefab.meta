@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 218cb19dc624df14f9c00a35de59262c
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/MilkBrick_e8foxc.prefab
+  uploadId: 419452

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 174dbb2ecd2fb354aa5370dd3c78290d
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Cream_jatl5h_Pack01_Var01.prefab
+  uploadId: 419452

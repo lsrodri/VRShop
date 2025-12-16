@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c4caa4f13e2e7814789dda031b4f499e
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/WaterBottle_cbaimv.prefab
+  uploadId: 419452

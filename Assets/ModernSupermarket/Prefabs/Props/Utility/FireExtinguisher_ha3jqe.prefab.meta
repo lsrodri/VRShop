@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b9c0024848346d24d81a9199decb4f0b
+labels:
+- Utility
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Utility/FireExtinguisher_ha3jqe.prefab
+  uploadId: 419452

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f2da9aec35a7c4b439f1dbdbe1dcac4f
+labels:
+- Utility
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Utility/Rooflight_9ecem1.prefab
+  uploadId: 419452

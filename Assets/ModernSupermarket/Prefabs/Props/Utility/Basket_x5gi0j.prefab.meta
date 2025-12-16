@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 97b4a40764c96a54bb687c5fe05bd561
+labels:
+- Storage
+- Utility
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Utility/Basket_x5gi0j.prefab
+  uploadId: 419452

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: fd24f13b94586844ea7794c7b8808a56
+labels:
+- Architecture
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Architecture/WallTop.prefab
+  uploadId: 419452

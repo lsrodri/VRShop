@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: b6a12787f8cb7d8488dbe0c68e5b2ad2
+labels:
+- Edible
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Produce/Basket_o52iei_Full02.prefab
+  uploadId: 419452

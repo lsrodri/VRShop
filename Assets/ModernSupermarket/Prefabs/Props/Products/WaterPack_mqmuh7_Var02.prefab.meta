@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8053923efb11efb48813463402a1f7cb
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/WaterPack_mqmuh7_Var02.prefab
+  uploadId: 419452

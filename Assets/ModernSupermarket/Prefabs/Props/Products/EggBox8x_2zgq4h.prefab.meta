@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 169545b0ddb8f0f499aab64e2c832f40
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/EggBox8x_2zgq4h.prefab
+  uploadId: 419452

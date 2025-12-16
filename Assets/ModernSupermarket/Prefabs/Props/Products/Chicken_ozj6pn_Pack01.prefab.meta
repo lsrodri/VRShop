@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 6d2284e31055cac46bbf8c9806641a8a
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Chicken_ozj6pn_Pack01.prefab
+  uploadId: 419452

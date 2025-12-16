@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b84cee0ef6ba0e0458cbbb101c04e5d0
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Soda_d7rdw9_Var01.prefab
+  uploadId: 419452

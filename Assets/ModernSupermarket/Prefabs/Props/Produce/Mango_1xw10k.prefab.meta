@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 16398fca7ee180640a06f9078e77ac23
+labels:
+- Edible
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Produce/Mango_1xw10k.prefab
+  uploadId: 419452

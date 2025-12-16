@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: aa2a0d13525651b429ef1e12dc3e15f4
+labels:
+- Furniture
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Furniture/Shelf_kicg9f.prefab
+  uploadId: 419452

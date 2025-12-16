@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 5b150f01c5666e549822afc697b1cc7f
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Sauce_cfrew8_Var02.prefab
+  uploadId: 419452

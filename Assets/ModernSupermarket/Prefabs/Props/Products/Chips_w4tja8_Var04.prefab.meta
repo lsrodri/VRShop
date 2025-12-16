@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: ae25a2e007e5e6a41ba94aecd337da15
+labels:
+- Product
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 186122
+  packageName: Modern Supermarket
+  packageVersion: 1.1
+  assetPath: Assets/ModernSupermarket/Prefabs/Props/Products/Chips_w4tja8_Var04.prefab
+  uploadId: 419452
