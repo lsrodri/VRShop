@@ -12,6 +12,11 @@ public class ProductStocker : EditorWindow
     bool makeGrabbable = true; // Default checked
     const string PREF_LAST_DIR = "VRClass_LastProductDir";
 
+    // Global variables for shelf space and spacing
+    private const float SHELF_WIDTH = 0.6f;   // meters
+    private const float SHELF_DEPTH = 0.42f;  // meters
+    private const float SPACING_BETWEEN_PREFABS = 0.05f; // 5cm spacing
+
     [MenuItem("Tools/VR Research/Stock Shelf with Product %g")] // Ctrl+G
     public static void ShowWindow()
     {
@@ -123,11 +128,110 @@ public class ProductStocker : EditorWindow
         // Z-Alignment
         ApplyZAlignment(instance);
 
+        // Clone prefabs to fill shelf space
+        ClonePrefabsToFillShelf(instance, targetSlot);
+
         // Focus
         Selection.activeGameObject = targetSlot.gameObject;
         if (SceneView.lastActiveSceneView != null) SceneView.lastActiveSceneView.FrameSelected();
 
         Close();
+    }
+
+    void ClonePrefabsToFillShelf(GameObject originalInstance, Transform targetSlot)
+    {
+        // Calculate bounds of the aligned object
+        Bounds objectBounds = CalculateBounds(originalInstance);
+
+        if (objectBounds.size == Vector3.zero)
+        {
+            Debug.LogWarning("Could not calculate bounds for cloning.");
+            return;
+        }
+
+        // Get object dimensions in local space (X = width, Z = depth)
+        float objectWidth = objectBounds.size.x;
+        float objectDepth = objectBounds.size.z;
+
+        Debug.Log($"Object dimensions: Width={objectWidth:F3}m, Depth={objectDepth:F3}m");
+
+        // Calculate how many instances fit in each axis
+        int countX = Mathf.FloorToInt((SHELF_WIDTH + SPACING_BETWEEN_PREFABS) / (objectWidth + SPACING_BETWEEN_PREFABS));
+        int countZ = Mathf.FloorToInt((SHELF_DEPTH + SPACING_BETWEEN_PREFABS) / (objectDepth + SPACING_BETWEEN_PREFABS));
+
+        // Ensure at least the original stays
+        countX = Mathf.Max(1, countX);
+        countZ = Mathf.Max(1, countZ);
+
+        int totalInstances = countX * countZ;
+
+        Debug.Log($"Shelf capacity: {countX} (width) × {countZ} (depth) = {totalInstances} instances");
+        Debug.Log($"Shelf dimensions: {SHELF_WIDTH}m × {SHELF_DEPTH}m with {SPACING_BETWEEN_PREFABS}m spacing");
+
+        if (totalInstances == 1)
+        {
+            Debug.Log("Only one instance fits - no cloning needed.");
+            return;
+        }
+
+        // Calculate starting offset to center the grid
+        float totalWidthUsed = countX * objectWidth + (countX - 1) * SPACING_BETWEEN_PREFABS;
+        float totalDepthUsed = countZ * objectDepth + (countZ - 1) * SPACING_BETWEEN_PREFABS;
+
+        float startX = -totalWidthUsed / 2f + objectWidth / 2f;
+
+        // FIXED: Start Z should keep the original aligned position and expand into negative Z
+        // The original is at the FRONT (closest to Z=0), and clones go BACK (more negative)
+        Vector3 originalLocalPos = originalInstance.transform.localPosition;
+        float startZ = originalLocalPos.z; // Start at the aligned Z position (already negative)
+
+        // Position the original instance at the first grid position
+        originalInstance.transform.localPosition = new Vector3(startX, originalLocalPos.y, startZ);
+
+        // Create clones for remaining positions
+        List<GameObject> allInstances = new List<GameObject> { originalInstance };
+
+        for (int z = 0; z < countZ; z++)
+        {
+            for (int x = 0; x < countX; x++)
+            {
+                // Skip the first position (0,0) since we already have the original there
+                if (x == 0 && z == 0) continue;
+
+                // Calculate position
+                float posX = startX + x * (objectWidth + SPACING_BETWEEN_PREFABS);
+                // FIXED: Subtract z * (depth + spacing) to go deeper into the shelf (more negative Z)
+                float posZ = startZ - z * (objectDepth + SPACING_BETWEEN_PREFABS);
+
+                // Clone the original
+                GameObject clone = Instantiate(originalInstance, targetSlot);
+                clone.name = $"{originalInstance.name}_Clone_{x}_{z}";
+                clone.transform.localPosition = new Vector3(posX, originalLocalPos.y, posZ);
+                clone.transform.localRotation = originalInstance.transform.localRotation;
+                clone.transform.localScale = originalInstance.transform.localScale;
+
+                Undo.RegisterCreatedObjectUndo(clone, "Clone Product");
+                allInstances.Add(clone);
+            }
+        }
+
+        Debug.Log($"✓✓✓ Successfully created {allInstances.Count} instances ({countX}×{countZ} grid)");
+    }
+
+    Bounds CalculateBounds(GameObject obj)
+    {
+        Bounds combinedBounds = new Bounds(obj.transform.position, Vector3.zero);
+        Renderer[] renderers = obj.GetComponentsInChildren<Renderer>();
+
+        if (renderers.Length == 0) return combinedBounds;
+
+        foreach (Renderer r in renderers)
+        {
+            if (combinedBounds.size == Vector3.zero) combinedBounds = r.bounds;
+            else combinedBounds.Encapsulate(r.bounds);
+        }
+
+        return combinedBounds;
     }
 
     void MakeGrabbable(GameObject obj)
@@ -257,16 +361,9 @@ public class ProductStocker : EditorWindow
 
     void ApplyZAlignment(GameObject obj)
     {
-        Bounds combinedBounds = new Bounds(obj.transform.position, Vector3.zero);
-        Renderer[] renderers = obj.GetComponentsInChildren<Renderer>();
+        Bounds combinedBounds = CalculateBounds(obj);
 
-        if (renderers.Length == 0) return;
-
-        foreach (Renderer r in renderers)
-        {
-            if (combinedBounds.size == Vector3.zero) combinedBounds = r.bounds;
-            else combinedBounds.Encapsulate(r.bounds);
-        }
+        if (combinedBounds.size == Vector3.zero) return;
 
         // Z-axis alignment (existing code)
         float pivotToMaxZ = combinedBounds.max.z - obj.transform.position.z;
@@ -300,6 +397,7 @@ public class ProductStocker : EditorWindow
             Debug.LogWarning($"Could not parse ID from slot name: {slotName}");
         }
     }
+
     int CompareNatural(string a, string b)
     {
         return EditorUtility.NaturalCompare(a, b);

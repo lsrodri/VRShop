@@ -17,6 +17,6 @@ public class TrialProduct : MonoBehaviour
     }
     void OnEnable()
     {
-        transform.hideFlags = HideFlags.NotEditable;
+        //transform.hideFlags = HideFlags.NotEditable;
     }
 }
