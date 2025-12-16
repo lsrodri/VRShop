@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using UnityEngine.Networking;
 using TMPro;
+using UnityEngine.Rendering;
 
 public class TrialController : MonoBehaviour
 {
@@ -24,6 +25,19 @@ public class TrialController : MonoBehaviour
     public TextMeshPro shelfThreeLabel;
     public TextMeshPro shelfFourLabel;
 
+    [Header("Post Processing")]
+    public Volume postProcessingVolume;
+
+    [Header("Condition Settings")]
+    [Tooltip("Exposure value for conditions 1 & 2")]
+    public float exposure1 = -0.5f;
+    [Tooltip("Exposure value for conditions 3 & 4")]
+    public float exposure2 = 0.5f;
+    [Tooltip("Temperature value for conditions 1 & 3")]
+    public float temperature1 = -20f;
+    [Tooltip("Temperature value for conditions 2 & 4")]
+    public float temperature2 = 20f;
+
     [Header("Status")]
     [Tooltip("Leave at -1 to use saved value. Enter number to override.")]
     [SerializeField] private int overrideParticipantID = -1;
@@ -31,12 +45,20 @@ public class TrialController : MonoBehaviour
     [SerializeField] private int overrideTrialNumber = -1;
 
     [Header("Active Values (Read Only)")]
-    [SerializeField] private int currentParticipantID; // Remove 'public', make serialized for inspector viewing
+    [SerializeField] private int currentParticipantID;
     [SerializeField] private int currentTrialNumber;
+    [SerializeField] private int currentBlock;
+    [SerializeField] private int currentCondition;
+    [SerializeField] private float currentPostExposure;
+    [SerializeField] private float currentTemperature;
 
     // Keep public getters for other scripts
     public int CurrentParticipantID => currentParticipantID;
     public int CurrentTrialNumber => currentTrialNumber;
+    public int CurrentBlock => currentBlock;
+    public int CurrentCondition => currentCondition;
+    public float CurrentPostExposure => currentPostExposure;
+    public float CurrentTemperature => currentTemperature;
 
     // --- NEW: Track purchased products ---
     private HashSet<TrialProduct> purchasedProducts = new HashSet<TrialProduct>();
@@ -46,7 +68,9 @@ public class TrialController : MonoBehaviour
     public class TrialData
     {
         public int participantID;
+        public int block;
         public int trialNumber;
+        public int condition;
         public int shelfOneProductID;
         public int shelfTwoProductID;
         public int shelfThreeProductID;
@@ -64,7 +88,7 @@ public class TrialController : MonoBehaviour
         if (!purchasedProducts.Contains(product))
         {
             purchasedProducts.Add(product);
-            activeProducts.Remove(product); // Remove from active list
+            activeProducts.Remove(product);
             Debug.Log($"Product {product.productID} marked as purchased");
         }
     }
@@ -195,15 +219,17 @@ public class TrialController : MonoBehaviour
         for (int i = 1; i < lines.Length; i++)
         {
             string[] cols = lines[i].Split(',');
-            if (cols.Length < 6) continue;
+            if (cols.Length < 8) continue;
 
             TrialData t = new TrialData();
             int.TryParse(cols[0], out t.participantID);
-            int.TryParse(cols[1], out t.trialNumber);
-            int.TryParse(cols[2], out t.shelfOneProductID);
-            int.TryParse(cols[3], out t.shelfTwoProductID);
-            int.TryParse(cols[4], out t.shelfThreeProductID);
-            int.TryParse(cols[5], out t.shelfFourProductID);
+            int.TryParse(cols[1], out t.block);
+            int.TryParse(cols[2], out t.trialNumber);
+            int.TryParse(cols[3], out t.condition);
+            int.TryParse(cols[4], out t.shelfOneProductID);
+            int.TryParse(cols[5], out t.shelfTwoProductID);
+            int.TryParse(cols[6], out t.shelfThreeProductID);
+            int.TryParse(cols[7], out t.shelfFourProductID);
 
             allTrials.Add(t);
         }
@@ -247,12 +273,88 @@ public class TrialController : MonoBehaviour
             return;
         }
 
-        Debug.Log($"Running Trial {trialNum}...");
+        // Update current state
+        currentBlock = data.block;
+        currentCondition = data.condition;
+
+        Debug.Log($"Running Trial {trialNum} (Block {currentBlock}, Condition {currentCondition})...");
+
+        // Apply condition settings when trial loads
+        ApplyConditionSettings(data.condition);
 
         PlaceProductOnShelf(data.shelfOneProductID, shelfOnePosition, shelfOneLabel);
         PlaceProductOnShelf(data.shelfTwoProductID, shelfTwoPosition, shelfTwoLabel);
         PlaceProductOnShelf(data.shelfThreeProductID, shelfThreePosition, shelfThreeLabel);
         PlaceProductOnShelf(data.shelfFourProductID, shelfFourPosition, shelfFourLabel);
+    }
+
+    // Apply condition-based post-processing settings using global variables
+    void ApplyConditionSettings(int condition)
+    {
+        Debug.Log($"Applying settings for Condition {condition}");
+
+        // Validate post-processing volume
+        if (postProcessingVolume == null)
+        {
+            Debug.LogWarning("No Post Processing Volume assigned! Skipping condition application.");
+            return;
+        }
+
+        // Get the Color Adjustments component for Exposure
+        UnityEngine.Rendering.Universal.ColorAdjustments colorAdjustments;
+        if (!postProcessingVolume.profile.TryGet(out colorAdjustments))
+        {
+            Debug.LogError("ColorAdjustments component not found in Post Processing Volume profile!");
+            return;
+        }
+
+        // Get the White Balance component for Temperature
+        UnityEngine.Rendering.Universal.WhiteBalance whiteBalance;
+        if (!postProcessingVolume.profile.TryGet(out whiteBalance))
+        {
+            Debug.LogError("WhiteBalance component not found in Post Processing Volume profile!");
+            return;
+        }
+
+        // Apply settings based on condition using the global variables
+        switch (condition)
+        {
+            case 1:
+                // Condition 1: exposure1, temperature1
+                currentPostExposure = exposure1;
+                currentTemperature = temperature1;
+                break;
+
+            case 2:
+                // Condition 2: exposure1, temperature2
+                currentPostExposure = exposure1;
+                currentTemperature = temperature2;
+                break;
+
+            case 3:
+                // Condition 3: exposure2, temperature1
+                currentPostExposure = exposure2;
+                currentTemperature = temperature1;
+                break;
+
+            case 4:
+                // Condition 4: exposure2, temperature2
+                currentPostExposure = exposure2;
+                currentTemperature = temperature2;
+                break;
+
+            default:
+                Debug.LogWarning($"Unknown condition {condition}. Using default settings (0, 0).");
+                currentPostExposure = 0f;
+                currentTemperature = 0f;
+                break;
+        }
+
+        // Apply the current values to the post-processing effects
+        colorAdjustments.postExposure.value = currentPostExposure;
+        whiteBalance.temperature.value = currentTemperature;
+
+        Debug.Log($"Applied Condition {condition}: Exposure = {currentPostExposure}, Temperature = {currentTemperature}");
     }
 
     void PlaceProductOnShelf(int productID, Transform shelfSlot, TextMeshPro shelfLabel)
@@ -303,7 +405,7 @@ public class TrialController : MonoBehaviour
         RunTrial(currentParticipantID, currentTrialNumber);
     }
 
-    // NEW: Optional - Reset purchased products for new participant
+    // Optional - Reset purchased products for new participant
     public void ResetPurchasedProducts()
     {
         foreach (var p in purchasedProducts)
