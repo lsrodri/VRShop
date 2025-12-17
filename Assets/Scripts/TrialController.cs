@@ -251,15 +251,20 @@ public class TrialController : MonoBehaviour
 
     public void RunTrial(int pID, int trialNum)
     {
-        // MODIFIED: Only deactivate non-purchased products
+        // FIXED: Deactivate ALL active products
         foreach (var p in activeProducts)
         {
-            if (!purchasedProducts.Contains(p))
-            {
-                p.gameObject.SetActive(false);
-            }
+            p.gameObject.SetActive(false);
         }
+        
+        // CRITICAL FIX: Also deactivate purchased products (they were removed from activeProducts)
+        foreach (var p in purchasedProducts)
+        {
+            p.gameObject.SetActive(false);
+        }
+        
         activeProducts.Clear();
+        purchasedProducts.Clear();
 
         TrialData data = allTrials.Find(t => t.participantID == pID && t.trialNumber == trialNum);
 
@@ -361,15 +366,13 @@ public class TrialController : MonoBehaviour
     {
         if (sceneInventory.TryGetValue(productID, out TrialProduct product))
         {
-            // MODIFIED: Skip if product was already purchased
-            if (purchasedProducts.Contains(product))
+            // ADDED: Force deactivate first to ensure clean state
+            if (product.gameObject.activeSelf)
             {
-                Debug.Log($"Product {productID} already purchased, skipping placement.");
-                if (shelfLabel != null) shelfLabel.text = "SOLD";
-                return;
+                product.gameObject.SetActive(false);
             }
 
-            product.transform.SetParent(null);
+            // Now reposition and activate
             product.transform.position = shelfSlot.position;
             product.transform.rotation = shelfSlot.rotation;
             product.gameObject.SetActive(true);
@@ -386,6 +389,9 @@ public class TrialController : MonoBehaviour
                 }
             }
 
+            // ADDED: Re-enable interaction components (reversed from AddToCart)
+            ReEnableProductInteraction(product.gameObject);
+
             float price = priceDatabase.ContainsKey(productID) ? priceDatabase[productID] : 0f;
 
             if (shelfLabel != null) shelfLabel.text = price.ToString("F2");
@@ -395,6 +401,19 @@ public class TrialController : MonoBehaviour
             Debug.LogError($"Missing Product ID {productID}!");
             if (shelfLabel != null) shelfLabel.text = "---";
         }
+    }
+
+    // NEW: Re-enable interaction components when product is placed back on shelf
+    void ReEnableProductInteraction(GameObject product)
+    {
+        // Re-enable Meta Interaction SDK components
+        var handGrab = product.GetComponentInChildren<Oculus.Interaction.HandGrab.HandGrabInteractable>();
+        var grabInteractable = product.GetComponentInChildren<Oculus.Interaction.GrabInteractable>();
+        var grabbable = product.GetComponent<Oculus.Interaction.Grabbable>();
+
+        if (handGrab != null) handGrab.enabled = true;
+        if (grabInteractable != null) grabInteractable.enabled = true;
+        if (grabbable != null) grabbable.enabled = true;
     }
 
     public void NextTrial()
