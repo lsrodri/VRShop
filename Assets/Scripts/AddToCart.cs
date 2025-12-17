@@ -19,8 +19,8 @@ public class AddToCart : MonoBehaviour
 
     [Header("Organized Placement")]
     [SerializeField] private bool useOrganizedPlacement = true; // Toggle for organized vs. natural drop
-    [SerializeField] private float gridMargin = 0.05f; // 5cm margin from edges
-    [SerializeField] private float gridSpacing = 0.02f; // Space between products
+    [SerializeField] private float gridMargin = 0.04f; // 4cm margin from edges
+    [SerializeField] private float gridSpacing = 0.03f; // 3cm space between products
 
     private List<Bounds> placedItemsBounds = new List<Bounds>();
 
@@ -56,10 +56,10 @@ public class AddToCart : MonoBehaviour
         {
             // ✓ The ProductData GameObject is what we want to copy (the actual product mesh/collider)
             GameObject productObject = productData.gameObject;
-            
+
             // Get the parent TrialProduct for marking as purchased
             TrialProduct trialProduct = productData.GetComponentInParent<TrialProduct>();
-            
+
             if (trialProduct == null)
             {
                 Debug.LogError($"ProductData found but no parent TrialProduct for {productData.gameObject.name}");
@@ -88,7 +88,7 @@ public class AddToCart : MonoBehaviour
         {
             Debug.LogWarning($"Product {productData.productID} has no Rigidbody! Checking parent...");
             rb = productObject.GetComponentInParent<Rigidbody>();
-            
+
             if (rb == null)
             {
                 Debug.LogError($"No Rigidbody found for product {productData.productID}!");
@@ -121,7 +121,7 @@ public class AddToCart : MonoBehaviour
         }
 
         Debug.Log($"About to call NextTrial for product {productData.productID}");
-        
+
         // Proceed to next trial after product is secured
         if (trialController != null)
         {
@@ -136,16 +136,16 @@ public class AddToCart : MonoBehaviour
     void OrganizeProductInCart(GameObject product)
     {
         Debug.Log($"OrganizeProductInCart called for {product.name}");
-        
+
         // Create an independent copy of the product for the cart
         GameObject cartCopy = Instantiate(product);
         cartCopy.name = product.name + "_CartCopy";
-        
+
         Debug.Log($"Created cart copy: {cartCopy.name}");
-        
+
         // Parent to CartItems_Organized - use worldPositionStays=false for clean hierarchy
         cartCopy.transform.SetParent(cartItemsParent, false);
-        
+
         // Remove all TrialProduct and ProductData references from the copy
         foreach (var tp in cartCopy.GetComponentsInChildren<TrialProduct>(true))
             Destroy(tp);
@@ -161,33 +161,34 @@ public class AddToCart : MonoBehaviour
             rb.isKinematic = true;
             rb.useGravity = false;
         }
-        
-        // ✓ Get bounds AFTER removing components to get accurate size
+
+        // ✓ RESET TRANSFORMS to clean state BEFORE getting bounds
+        cartCopy.transform.localRotation = Quaternion.identity;
+        cartCopy.transform.localScale = Vector3.one;
+        cartCopy.transform.localPosition = Vector3.zero; // Temporary position for bounds calculation
+
+        // ✓ Get bounds AFTER removing components and resetting transforms
         Bounds itemBounds = GetCombinedBounds(cartCopy);
         Vector3 itemSize = itemBounds.size;
-        
+
         Debug.Log($"Item size: {itemSize}");
 
         // ✓ Calculate grid position relative to cartSurface dimensions
         Vector3 bestPosition = FindAvailablePosition(itemSize);
-        
+
         Debug.Log($"Best position calculated: {bestPosition}");
 
-        // ✓ RESET TRANSFORMS to clean state
-        cartCopy.transform.localRotation = Quaternion.identity;
-        cartCopy.transform.localScale = Vector3.one;
-        
         // ✓ Position the copy at the calculated grid position
         // The position is relative to cartItemsParent (which should be at cartSurface)
         cartCopy.transform.localPosition = bestPosition;
 
         // Store bounds for future collision detection
         placedItemsBounds.Add(new Bounds(bestPosition, itemSize));
-        
+
         Debug.Log($"✓ Product {cartCopy.name} copied with clean transforms and all interactivity removed");
         Debug.Log($"✓ Final local position: {cartCopy.transform.localPosition}");
         Debug.Log($"✓ CartItems_Organized child count: {cartItemsParent.childCount}");
-        
+
         // Hide the original product immediately so it can be reused by TrialController
         product.SetActive(false);
     }
@@ -195,7 +196,7 @@ public class AddToCart : MonoBehaviour
     void RemoveAllInteractionComponents(GameObject obj)
     {
         // Remove ALL Meta Interaction SDK components from the copy and its children
-        
+
         // Hand interaction components
         foreach (var component in obj.GetComponentsInChildren<HandGrabInteractable>(true))
             Destroy(component);
@@ -203,7 +204,7 @@ public class AddToCart : MonoBehaviour
             Destroy(component);
         foreach (var component in obj.GetComponentsInChildren<HandGrabPose>(true))
             Destroy(component);
-        
+
         // Grab interaction components
         foreach (var component in obj.GetComponentsInChildren<GrabInteractable>(true))
             Destroy(component);
@@ -211,40 +212,40 @@ public class AddToCart : MonoBehaviour
             Destroy(component);
         foreach (var component in obj.GetComponentsInChildren<Grabbable>(true))
             Destroy(component);
-        
+
         // Distance interaction components
         foreach (var component in obj.GetComponentsInChildren<DistanceGrabInteractable>(true))
             Destroy(component);
         foreach (var component in obj.GetComponentsInChildren<DistanceGrabInteractor>(true))
             Destroy(component);
-        
+
         // Snap interaction components
         foreach (var component in obj.GetComponentsInChildren<SnapInteractable>(true))
             Destroy(component);
         foreach (var component in obj.GetComponentsInChildren<SnapInteractor>(true))
             Destroy(component);
-        
+
         // Touchable components
         foreach (var component in obj.GetComponentsInChildren<TouchHandGrabInteractable>(true))
             Destroy(component);
-        
+
         // Ray interaction components
         foreach (var component in obj.GetComponentsInChildren<RayInteractable>(true))
             Destroy(component);
         foreach (var component in obj.GetComponentsInChildren<RayInteractor>(true))
             Destroy(component);
-        
+
         // Poke interaction components
         foreach (var component in obj.GetComponentsInChildren<PokeInteractable>(true))
             Destroy(component);
         foreach (var component in obj.GetComponentsInChildren<PokeInteractor>(true))
             Destroy(component);
-        
+
         // Remove any remaining components from the Oculus.Interaction namespace
         Component[] allComponents = obj.GetComponentsInChildren<Component>(true);
         foreach (var component in allComponents)
         {
-            if (component != null && component.GetType().Namespace != null && 
+            if (component != null && component.GetType().Namespace != null &&
                 component.GetType().Namespace.StartsWith("Oculus.Interaction"))
             {
                 // Don't destroy Transform or GameObject
@@ -254,7 +255,7 @@ public class AddToCart : MonoBehaviour
                 }
             }
         }
-        
+
         Debug.Log($"✓ All Meta SDK interaction components removed from {obj.name}");
     }
 
@@ -276,69 +277,108 @@ public class AddToCart : MonoBehaviour
             rb.isKinematic = true;
             rb.useGravity = false;
         }
-        
+
         Debug.Log($"✓ Product {product.name} converted to static (non-organized mode)");
     }
 
     private Vector3 FindAvailablePosition(Vector3 itemSize)
     {
-        // ✓ Calculate grid boundaries based on cartSurface dimensions
-        float surfaceWidth = cartSurface.localScale.x;
-        float surfaceDepth = cartSurface.localScale.z;
-        
-        // Calculate starting position (corner with margin)
-        float startX = -surfaceWidth / 2 + gridMargin;
-        float startZ = -surfaceDepth / 2 + gridMargin;
-        
-        // Calculate max boundaries
+        // ✓ Use cartSurface dimensions to define the placement area
+        // Get the actual size of the cart surface (not scale)
+        Renderer surfaceRenderer = cartSurface.GetComponent<Renderer>();
+        Vector3 surfaceSize;
+
+        if (surfaceRenderer != null)
+        {
+            surfaceSize = surfaceRenderer.bounds.size;
+        }
+        else
+        {
+            // Fallback to using localScale if no renderer
+            surfaceSize = new Vector3(
+                cartSurface.localScale.x,
+                cartSurface.localScale.y,
+                cartSurface.localScale.z
+            );
+        }
+
+        float surfaceWidth = surfaceSize.x;
+        float surfaceDepth = surfaceSize.z;
+
+        Debug.Log($"CartSurface dimensions - Width: {surfaceWidth}, Depth: {surfaceDepth}");
+
+        // ✓ Calculate boundaries with 4cm margin from edges
+        float minX = -surfaceWidth / 2 + gridMargin;
         float maxX = surfaceWidth / 2 - gridMargin;
+        float minZ = -surfaceDepth / 2 + gridMargin;
         float maxZ = surfaceDepth / 2 - gridMargin;
 
-        Debug.Log($"Grid boundaries - StartX: {startX}, StartZ: {startZ}, MaxX: {maxX}, MaxZ: {maxZ}");
+        Debug.Log($"Grid boundaries - MinX: {minX}, MaxX: {maxX}, MinZ: {minZ}, MaxZ: {maxZ}");
+        Debug.Log($"Item size - Width: {itemSize.x}, Depth: {itemSize.z}, Height: {itemSize.y}");
+        Debug.Log($"Currently placed items: {placedItemsBounds.Count}");
 
-        float currentX = startX;
-        float currentZ = startZ;
-        float rowHeight = itemSize.z;
+        // Start from the corner
+        float currentZ = minZ;
 
-        // Try to find a non-colliding position in a grid layout
-        while (currentZ + itemSize.z / 2 <= maxZ)
+        // Try to find a non-colliding position in a grid layout (row by row)
+        while (currentZ + itemSize.z <= maxZ)
         {
-            currentX = startX;
-            
-            while (currentX + itemSize.x / 2 <= maxX)
+            float currentX = minX; // Reset X for each new row
+
+            while (currentX + itemSize.x <= maxX)
             {
+                // ✓ Position is the CENTER of the item
                 Vector3 candidatePos = new Vector3(
                     currentX + itemSize.x / 2,
-                    itemSize.y / 2,
+                    itemSize.y / 2, // Place item so its bottom sits on the surface
                     currentZ + itemSize.z / 2
                 );
 
                 Bounds candidateBounds = new Bounds(candidatePos, itemSize);
 
+                Debug.Log($"Testing position: {candidatePos}");
+
+                // Check if this position collides with any placed items
                 if (!CollidesWithPlacedItems(candidateBounds))
                 {
-                    Debug.Log($"Found available position: {candidatePos}");
+                    Debug.Log($"✓ Found available position: {candidatePos}");
                     return candidatePos;
                 }
+                else
+                {
+                    Debug.Log($"✗ Position {candidatePos} collides with existing items");
+                }
 
+                // ✓ Move to next X position (item width + 3cm spacing)
                 currentX += itemSize.x + gridSpacing;
             }
 
-            currentZ += rowHeight + gridSpacing;
+            // ✓ Move to next row (item depth + 3cm spacing)
+            currentZ += itemSize.z + gridSpacing;
         }
 
-        // Fallback: stack on top
-        Vector3 stackedPos = new Vector3(0, placedItemsBounds.Count * itemSize.y + itemSize.y / 2, 0);
-        Debug.LogWarning($"No grid space available, stacking at: {stackedPos}");
+        // Fallback: stack on top if no horizontal space found
+        float stackHeight = 0;
+        foreach (var bounds in placedItemsBounds)
+        {
+            if (bounds.max.y > stackHeight)
+                stackHeight = bounds.max.y;
+        }
+        
+        Vector3 stackedPos = new Vector3(0, stackHeight + itemSize.y / 2, 0);
+        Debug.LogWarning($"⚠ No grid space available, stacking at: {stackedPos}");
         return stackedPos;
     }
 
     private bool CollidesWithPlacedItems(Bounds candidateBounds)
     {
-        foreach (Bounds placedBounds in placedItemsBounds)
+        for (int i = 0; i < placedItemsBounds.Count; i++)
         {
+            Bounds placedBounds = placedItemsBounds[i];
+            
             if (candidateBounds.Intersects(placedBounds))
             {
+                Debug.Log($"  Collision detected with item {i}: candidate center={candidateBounds.center}, size={candidateBounds.size}, placed center={placedBounds.center}, size={placedBounds.size}");
                 return true;
             }
         }
