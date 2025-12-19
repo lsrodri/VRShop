@@ -8905,7 +8905,7 @@ MonoBehaviour:
   temperature1: -20
   temperature2: 20
   overrideParticipantID: 1
-  overrideTrialNumber: 4
+  overrideTrialNumber: 1
   currentParticipantID: 1
   currentTrialNumber: 1
   currentBlock: 0

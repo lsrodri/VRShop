@@ -101,6 +101,14 @@ public class TrialController : MonoBehaviour
 
     void Start()
     {
+
+        Application.targetFrameRate = 90;
+
+        // Also request 90Hz from OVR Plugin if available
+        #if UNITY_ANDROID && !UNITY_EDITOR
+                OVRPlugin.systemDisplayFrequency = 90.0f;
+        #endif
+
         // Apply override logic
         if (overrideParticipantID > 0)
         {
