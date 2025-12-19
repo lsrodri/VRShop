@@ -116,11 +116,7 @@ public class ProductStocker : EditorWindow
         instance.transform.localScale = Vector3.one;
 
         // Unpack prefab
-        if (makeGrabbable)
-        {
-            PrefabUtility.UnpackPrefabInstance(instance, PrefabUnpackMode.Completely, InteractionMode.AutomatedAction);
-            MakeGrabbable(instance);
-        }
+        PrefabUtility.UnpackPrefabInstance(instance, PrefabUnpackMode.Completely, InteractionMode.AutomatedAction);
 
         // Add ProductData and assign ID
         AddProductData(instance, targetSlot);
@@ -128,8 +124,14 @@ public class ProductStocker : EditorWindow
         // Z-Alignment
         ApplyZAlignment(instance);
 
-        // Clone prefabs to fill shelf space
-        ClonePrefabsToFillShelf(instance, targetSlot);
+        // ✓ MODIFIED: Clone prefabs first, then apply grabbable logic based on row
+        List<GameObject> allInstances = ClonePrefabsToFillShelf(instance, targetSlot);
+
+        // ✓ NEW: Apply interaction setup based on position (front row vs back rows)
+        if (makeGrabbable)
+        {
+            ApplyRowBasedInteraction(allInstances);
+        }
 
         // Focus
         Selection.activeGameObject = targetSlot.gameObject;
@@ -138,7 +140,7 @@ public class ProductStocker : EditorWindow
         Close();
     }
 
-    void ClonePrefabsToFillShelf(GameObject originalInstance, Transform targetSlot)
+    List<GameObject> ClonePrefabsToFillShelf(GameObject originalInstance, Transform targetSlot)
     {
         // Calculate bounds of the aligned object
         Bounds objectBounds = CalculateBounds(originalInstance);
@@ -146,7 +148,7 @@ public class ProductStocker : EditorWindow
         if (objectBounds.size == Vector3.zero)
         {
             Debug.LogWarning("Could not calculate bounds for cloning.");
-            return;
+            return new List<GameObject> { originalInstance };
         }
 
         // Get object dimensions in local space (X = width, Z = depth)
@@ -171,7 +173,7 @@ public class ProductStocker : EditorWindow
         if (totalInstances == 1)
         {
             Debug.Log("Only one instance fits - no cloning needed.");
-            return;
+            return new List<GameObject> { originalInstance };
         }
 
         // Calculate starting offset to center the grid
@@ -180,42 +182,156 @@ public class ProductStocker : EditorWindow
 
         float startX = -totalWidthUsed / 2f + objectWidth / 2f;
 
-        // FIXED: Start Z should keep the original aligned position and expand into negative Z
-        // The original is at the FRONT (closest to Z=0), and clones go BACK (more negative)
+        // Start Z at the aligned position (front row)
         Vector3 originalLocalPos = originalInstance.transform.localPosition;
-        float startZ = originalLocalPos.z; // Start at the aligned Z position (already negative)
+        float startZ = originalLocalPos.z;
 
-        // Position the original instance at the first grid position
-        originalInstance.transform.localPosition = new Vector3(startX, originalLocalPos.y, startZ);
-
-        // Create clones for remaining positions
-        List<GameObject> allInstances = new List<GameObject> { originalInstance };
+        // ✓ MODIFIED: Store instances in a 2D structure to track rows
+        List<List<GameObject>> rowInstances = new List<List<GameObject>>();
 
         for (int z = 0; z < countZ; z++)
         {
+            List<GameObject> currentRow = new List<GameObject>();
+
             for (int x = 0; x < countX; x++)
             {
-                // Skip the first position (0,0) since we already have the original there
-                if (x == 0 && z == 0) continue;
+                GameObject instanceToAdd;
 
-                // Calculate position
-                float posX = startX + x * (objectWidth + SPACING_BETWEEN_PREFABS);
-                // FIXED: Subtract z * (depth + spacing) to go deeper into the shelf (more negative Z)
-                float posZ = startZ - z * (objectDepth + SPACING_BETWEEN_PREFABS);
+                // First position uses the original
+                if (x == 0 && z == 0)
+                {
+                    instanceToAdd = originalInstance;
+                    instanceToAdd.transform.localPosition = new Vector3(startX, originalLocalPos.y, startZ);
+                }
+                else
+                {
+                    // Calculate position
+                    float posX = startX + x * (objectWidth + SPACING_BETWEEN_PREFABS);
+                    float posZ = startZ - z * (objectDepth + SPACING_BETWEEN_PREFABS);
 
-                // Clone the original
-                GameObject clone = Instantiate(originalInstance, targetSlot);
-                clone.name = $"{originalInstance.name}_Clone_{x}_{z}";
-                clone.transform.localPosition = new Vector3(posX, originalLocalPos.y, posZ);
-                clone.transform.localRotation = originalInstance.transform.localRotation;
-                clone.transform.localScale = originalInstance.transform.localScale;
+                    // Clone the original
+                    GameObject clone = Instantiate(originalInstance, targetSlot);
+                    clone.name = $"{originalInstance.name}_Clone_{x}_{z}";
+                    clone.transform.localPosition = new Vector3(posX, originalLocalPos.y, posZ);
+                    clone.transform.localRotation = originalInstance.transform.localRotation;
+                    clone.transform.localScale = originalInstance.transform.localScale;
 
-                Undo.RegisterCreatedObjectUndo(clone, "Clone Product");
-                allInstances.Add(clone);
+                    Undo.RegisterCreatedObjectUndo(clone, "Clone Product");
+                    instanceToAdd = clone;
+                }
+
+                currentRow.Add(instanceToAdd);
             }
+
+            rowInstances.Add(currentRow);
+        }
+
+        // Flatten to single list for return
+        List<GameObject> allInstances = new List<GameObject>();
+        foreach (var row in rowInstances)
+        {
+            allInstances.AddRange(row);
         }
 
         Debug.Log($"✓✓✓ Successfully created {allInstances.Count} instances ({countX}×{countZ} grid)");
+        Debug.Log($"Front row has {rowInstances[0].Count} items, back rows have {allInstances.Count - rowInstances[0].Count} items");
+
+        return allInstances;
+    }
+
+    void ApplyRowBasedInteraction(List<GameObject> allInstances)
+    {
+        if (allInstances.Count == 0) return;
+
+        // ✓ Determine front row: items with the highest Z position (closest to front)
+        float maxZ = allInstances.Max(obj => obj.transform.localPosition.z);
+        float zThreshold = 0.001f; // Small tolerance for floating point comparison
+
+        List<GameObject> frontRowItems = new List<GameObject>();
+        List<GameObject> backRowItems = new List<GameObject>();
+
+        foreach (var obj in allInstances)
+        {
+            float objZ = obj.transform.localPosition.z;
+
+            if (Mathf.Abs(objZ - maxZ) < zThreshold)
+            {
+                frontRowItems.Add(obj);
+            }
+            else
+            {
+                backRowItems.Add(obj);
+            }
+        }
+
+        Debug.Log($"✓ Identified {frontRowItems.Count} front row items and {backRowItems.Count} back row items");
+
+        // ✓ Make front row fully grabbable
+        foreach (var obj in frontRowItems)
+        {
+            MakeGrabbable(obj);
+        }
+
+        // ✓ Make back row static (colliders only, no physics/rigidbody)
+        foreach (var obj in backRowItems)
+        {
+            MakeStaticWithCollider(obj);
+        }
+
+        Debug.Log($"✓✓✓ Front row: {frontRowItems.Count} items made grabbable");
+        Debug.Log($"✓✓✓ Back rows: {backRowItems.Count} items made static with colliders");
+    }
+
+    void MakeStaticWithCollider(GameObject obj)
+    {
+        // ✓ Ensure collider exists
+        Collider collider = obj.GetComponent<Collider>();
+
+        if (collider == null)
+        {
+            MeshFilter meshFilter = obj.GetComponent<MeshFilter>();
+
+            if (meshFilter != null && meshFilter.sharedMesh != null)
+            {
+                MeshCollider meshCollider = Undo.AddComponent<MeshCollider>(obj);
+                meshCollider.sharedMesh = meshFilter.sharedMesh;
+                meshCollider.convex = false; // Static objects don't need convex
+                Debug.Log($"✓ Added MeshCollider (non-convex) to back row item {obj.name}");
+            }
+            else
+            {
+                Renderer renderer = obj.GetComponent<Renderer>();
+                if (renderer != null)
+                {
+                    BoxCollider boxCollider = Undo.AddComponent<BoxCollider>(obj);
+                    Debug.Log($"✓ Added BoxCollider to back row item {obj.name}");
+                }
+            }
+        }
+
+        // ✓ Remove Rigidbody if it exists
+        Rigidbody rb = obj.GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            Undo.DestroyObjectImmediate(rb);
+            Debug.Log($"✓ Removed Rigidbody from back row item {obj.name}");
+        }
+
+        // ✓ Remove any interaction components if they exist
+        Grabbable grabbable = obj.GetComponent<Grabbable>();
+        if (grabbable != null)
+        {
+            Undo.DestroyObjectImmediate(grabbable);
+        }
+
+        // Remove interaction child if it exists
+        Transform interactionChild = obj.transform.Find("ISDK_HandGrabInteraction");
+        if (interactionChild != null)
+        {
+            Undo.DestroyObjectImmediate(interactionChild.gameObject);
+        }
+
+        Debug.Log($"✓ Made {obj.name} static with collider only (no physics)");
     }
 
     Bounds CalculateBounds(GameObject obj)
@@ -247,14 +363,13 @@ public class ProductStocker : EditorWindow
             if (meshFilter != null && meshFilter.sharedMesh != null)
             {
                 MeshCollider meshCollider = Undo.AddComponent<MeshCollider>(obj);
-                meshCollider.sharedMesh = meshFilter.sharedMesh; // CRITICAL: Assign the mesh
+                meshCollider.sharedMesh = meshFilter.sharedMesh;
                 meshCollider.convex = true;
                 collider = meshCollider;
                 Debug.Log($"✓ Added MeshCollider with mesh '{meshFilter.sharedMesh.name}' to {obj.name}");
             }
             else
             {
-                // No valid mesh - try primitive collider fallback
                 Renderer renderer = obj.GetComponent<Renderer>();
                 if (renderer != null)
                 {
@@ -264,20 +379,18 @@ public class ProductStocker : EditorWindow
                 }
                 else
                 {
-                    // CRITICAL ERROR: Can't make grabbable without collider
                     EditorUtility.DisplayDialog("Cannot Make Grabbable",
                         $"Object '{obj.name}' has no MeshFilter or Renderer.\n\n" +
                         "Cannot create collider. Please add geometry to this object or uncheck 'Make Grabbable'.",
                         "OK");
 
                     Debug.LogError($"❌ FAILED: {obj.name} cannot be made grabbable - no mesh or renderer found!");
-                    return; // Abort grabbable setup
+                    return;
                 }
             }
         }
         else if (collider is MeshCollider meshCol)
         {
-            // Existing MeshCollider - validate it has a mesh
             if (meshCol.sharedMesh == null)
             {
                 MeshFilter meshFilter = obj.GetComponent<MeshFilter>();
@@ -365,14 +478,12 @@ public class ProductStocker : EditorWindow
 
         if (combinedBounds.size == Vector3.zero) return;
 
-        // Z-axis alignment (existing code)
+        // Z-axis alignment
         float pivotToMaxZ = combinedBounds.max.z - obj.transform.position.z;
         float pushAmountZ = -pivotToMaxZ;
 
-        // Y-axis alignment (NEW)
-        // Calculate how far the pivot is from the bottom of the object
+        // Y-axis alignment
         float pivotToMinY = combinedBounds.min.y - obj.transform.position.y;
-        // Move the object up so its bottom sits exactly at Y=0
         float pushAmountY = -pivotToMinY;
 
         // Apply both offsets
@@ -385,7 +496,7 @@ public class ProductStocker : EditorWindow
     {
         ProductData productData = Undo.AddComponent<ProductData>(obj);
 
-        // Extract numeric ID from slot name (e.g., "Slot_12" -> 12)
+        // Extract numeric ID from slot name
         string slotName = slot.gameObject.name;
         if (int.TryParse(System.Text.RegularExpressions.Regex.Match(slotName, @"\d+").Value, out int id))
         {

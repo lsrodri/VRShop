@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -63,6 +64,12 @@ public class TrialController : MonoBehaviour
     // --- NEW: Track purchased products ---
     private HashSet<TrialProduct> purchasedProducts = new HashSet<TrialProduct>();
 
+    // --- ✓ NEW: Logging support ---
+    private TrialLogger trialLogger;
+    private DateTime currentTrialStartTime;
+    private int purchasedProductID = 0; // 0 = no purchase
+    private TrialData currentTrialData; // Store current trial data for logging
+
     // --- Internal Data Structures ---
     [System.Serializable]
     public class TrialData
@@ -89,6 +96,10 @@ public class TrialController : MonoBehaviour
         {
             purchasedProducts.Add(product);
             activeProducts.Remove(product);
+
+            // ✓ NEW: Store the purchased product ID for logging
+            purchasedProductID = product.productID;
+
             Debug.Log($"Product {product.productID} marked as purchased");
         }
     }
@@ -101,13 +112,24 @@ public class TrialController : MonoBehaviour
 
     void Start()
     {
-
         Application.targetFrameRate = 90;
 
         // Also request 90Hz from OVR Plugin if available
         #if UNITY_ANDROID && !UNITY_EDITOR
                 OVRPlugin.systemDisplayFrequency = 90.0f;
         #endif
+
+        // ✓ NEW: Initialize logger
+        trialLogger = GetComponent<TrialLogger>();
+        if (trialLogger == null)
+        {
+            Debug.LogWarning("TrialLogger component not found, adding it now...");
+            trialLogger = gameObject.AddComponent<TrialLogger>();
+        }
+        else
+        {
+            Debug.Log("TrialLogger component found and initialized");
+        }
 
         // Apply override logic
         if (overrideParticipantID > 0)
@@ -259,6 +281,10 @@ public class TrialController : MonoBehaviour
 
     public void RunTrial(int pID, int trialNum)
     {
+        // ✓ NEW: Record trial start time
+        currentTrialStartTime = DateTime.Now;
+        purchasedProductID = 0; // Reset purchase status
+
         // FIXED: Deactivate ALL active products
         foreach (var p in activeProducts)
         {
@@ -279,12 +305,16 @@ public class TrialController : MonoBehaviour
         if (data == null)
         {
             Debug.Log($"No data for P:{pID} T:{trialNum}. Experiment Complete?");
+            // ✓ Clear shelves and return
             if (shelfOneLabel) shelfOneLabel.text = "";
             if (shelfTwoLabel) shelfTwoLabel.text = "";
             if (shelfThreeLabel) shelfThreeLabel.text = "";
             if (shelfFourLabel) shelfFourLabel.text = "";
             return;
         }
+
+        // ✓ NEW: Store current trial data for logging
+        currentTrialData = data;
 
         // Update current state
         currentBlock = data.block;
@@ -426,10 +456,66 @@ public class TrialController : MonoBehaviour
 
     public void NextTrial()
     {
+        // ✓ NEW: Log the completed trial before moving to next
+        LogCurrentTrial();
+
         currentTrialNumber++;
         PlayerPrefs.SetInt("TrialNumber", currentTrialNumber);
         PlayerPrefs.Save();
         RunTrial(currentParticipantID, currentTrialNumber);
+    }
+
+    // ✓ NEW: Log trial data to CSV
+    private void LogCurrentTrial()
+    {
+        if (trialLogger == null || currentTrialData == null)
+        {
+            Debug.LogWarning("Cannot log trial - logger or trial data is null");
+            return;
+        }
+
+        DateTime trialEndTime = DateTime.Now;
+        double duration = (trialEndTime - currentTrialStartTime).TotalSeconds;
+
+        // ✓ Determine which shelf the purchased product was on (now returns int)
+        int shelfLocation = DetermineShelfLocation(purchasedProductID);
+
+        TrialLogEntry logEntry = new TrialLogEntry
+        {
+            participantID = currentParticipantID,
+            block = currentTrialData.block,
+            trialNumber = currentTrialData.trialNumber,
+            condition = currentTrialData.condition,
+            trialStartTime = currentTrialStartTime,
+            trialEndTime = trialEndTime,
+            trialDuration = duration,
+            productPurchased = purchasedProductID,
+            shelfLocation = shelfLocation, // ✓ Now an int
+            shelfOneProductID = currentTrialData.shelfOneProductID,
+            shelfTwoProductID = currentTrialData.shelfTwoProductID,
+            shelfThreeProductID = currentTrialData.shelfThreeProductID,
+            shelfFourProductID = currentTrialData.shelfFourProductID
+        };
+
+        trialLogger.LogTrial(logEntry);
+    }
+
+    // ✓ NEW: Determine which shelf the product was on
+    private int DetermineShelfLocation(int productID)
+    {
+        if (productID == 0 || currentTrialData == null)
+            return 0; // None
+
+        if (productID == currentTrialData.shelfOneProductID)
+            return 1; // Shelf1
+        else if (productID == currentTrialData.shelfTwoProductID)
+            return 2; // Shelf2
+        else if (productID == currentTrialData.shelfThreeProductID)
+            return 3; // Shelf3
+        else if (productID == currentTrialData.shelfFourProductID)
+            return 4; // Shelf4
+        else
+            return -1; // Unknown (shouldn't happen, but for safety)
     }
 
     // Optional - Reset purchased products for new participant

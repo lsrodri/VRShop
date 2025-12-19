@@ -19,8 +19,8 @@ public class AddToCart : MonoBehaviour
 
     [Header("Organized Placement")]
     [SerializeField] private bool useOrganizedPlacement = true; // Toggle for organized vs. natural drop
-    [SerializeField] private float gridMargin = 0.04f; // 4cm margin from edges
-    [SerializeField] private float gridSpacing = 0.03f; // 3cm space between products
+    [SerializeField] private float gridMargin = 0.02f; // 2cm margin from edges
+    [SerializeField] private float gridSpacing = 0.02f; // 2cm space between products
 
     private List<Bounds> placedItemsBounds = new List<Bounds>();
 
